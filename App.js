@@ -11,8 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true,
+    origin: "https://ecommerce-client-ten-neon.vercel.app",
+    methods:["GET"],
+    credentials: true
   })
 );
 app.use("/", Product);
